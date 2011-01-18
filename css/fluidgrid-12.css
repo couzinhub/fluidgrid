@@ -1,0 +1,140 @@
+/*FluidGrid CSS Framework --  Hubert Florin --  couzin.hub@gmail.com --  Copyright 2009 Hubert Florin --  Built with SASS http://sass-lang.com/ */
+.container_12 .span-1 { width: 6.5%; }
+
+.container_12 .grid_12 .col-1 { left: 0%; }
+
+.container_12 .span-2 { width: 15%; }
+
+.container_12 .grid_12 .col-2 { left: 8.5%; }
+
+.container_12 .span-3 { width: 23.5%; }
+
+.container_12 .grid_12 .col-3 { left: 17%; }
+
+.container_12 .span-4 { width: 32%; }
+
+.container_12 .grid_12 .col-4 { left: 25.5%; }
+
+.container_12 .span-5 { width: 40.5%; }
+
+.container_12 .grid_12 .col-5 { left: 34%; }
+
+.container_12 .span-6 { width: 49%; }
+
+.container_12 .grid_12 .col-6 { left: 42.5%; }
+
+.container_12 .span-7 { width: 57.5%; }
+
+.container_12 .grid_12 .col-7 { left: 51%; }
+
+.container_12 .span-8 { width: 66%; }
+
+.container_12 .grid_12 .col-8 { left: 59.5%; }
+
+.container_12 .span-9 { width: 74.5%; }
+
+.container_12 .grid_12 .col-9 { left: 68%; }
+
+.container_12 .span-10 { width: 83%; }
+
+.container_12 .grid_12 .col-10 { left: 76.5%; }
+
+.container_12 .span-11 { width: 91.5%; }
+
+.container_12 .grid_12 .col-11 { left: 85%; }
+
+.container_12 .span-12 { width: 100%; }
+
+.container_12 .grid_12 .col-12 { left: 93.5%; }
+
+.stupid_test, .container_12 .span-11 .span-10, .container_12 .span-11 .span-9, .container_12 .span-11 .span-8, .container_12 .span-11 .span-7, .container_12 .span-11 .span-6, .container_12 .span-11 .span-5, .container_12 .span-11 .span-4, .container_12 .span-11 .span-3, .container_12 .span-11 .span-2, .container_12 .span-11 .span-1, .container_12 .span-10 .span-9, .container_12 .span-10 .span-8, .container_12 .span-10 .span-7, .container_12 .span-10 .span-6, .container_12 .span-10 .span-5, .container_12 .span-10 .span-4, .container_12 .span-10 .span-3, .container_12 .span-10 .span-2, .container_12 .span-10 .span-1, .container_12 .span-9 .span-8, .container_12 .span-9 .span-7, .container_12 .span-9 .span-6, .container_12 .span-9 .span-5, .container_12 .span-9 .span-4, .container_12 .span-9 .span-3, .container_12 .span-9 .span-2, .container_12 .span-9 .span-1, .container_12 .span-8 .span-7, .container_12 .span-8 .span-6, .container_12 .span-8 .span-5, .container_12 .span-8 .span-4, .container_12 .span-8 .span-3, .container_12 .span-8 .span-2, .container_12 .span-8 .span-1, .container_12 .span-7 .span-6, .container_12 .span-7 .span-5, .container_12 .span-7 .span-4, .container_12 .span-7 .span-3, .container_12 .span-7 .span-2, .container_12 .span-7 .span-1, .container_12 .span-6 .span-5, .container_12 .span-6 .span-4, .container_12 .span-6 .span-3, .container_12 .span-6 .span-2, .container_12 .span-6 .span-1, .container_12 .span-5 .span-4, .container_12 .span-5 .span-3, .container_12 .span-5 .span-2, .container_12 .span-5 .span-1, .container_12 .span-4 .span-3, .container_12 .span-4 .span-2, .container_12 .span-4 .span-1, .container_12 .span-3 .span-2, .container_12 .span-3 .span-1, .container_12 .span-2 .span-1 { left: 2.186%; margin-right: 2.186%; }
+
+.container_12 .span-11 .alpha, .container_12 .span-11 .omega { margin-right: 0; }
+.container_12 .span-11 .span-11 { width: 100.0%; }
+.container_12 .span-11 .span-10 { width: 90.71%; }
+.container_12 .span-11 .span-9 { width: 81.421%; }
+.container_12 .span-11 .span-8 { width: 72.131%; }
+.container_12 .span-11 .span-7 { width: 62.842%; }
+.container_12 .span-11 .span-6 { width: 53.552%; }
+.container_12 .span-11 .span-5 { width: 44.262%; }
+.container_12 .span-11 .span-4 { width: 34.973%; }
+.container_12 .span-11 .span-3 { width: 25.683%; }
+.container_12 .span-11 .span-2 { width: 16.393%; }
+.container_12 .span-11 .span-1 { width: 7.104%; }
+
+.container_12 .span-10 .alpha, .container_12 .span-10 .omega { margin-right: 0; }
+.container_12 .span-10 .span-10 { width: 90.71%; }
+.container_12 .span-10 .span-9 { width: 81.421%; }
+.container_12 .span-10 .span-8 { width: 72.131%; }
+.container_12 .span-10 .span-7 { width: 62.842%; }
+.container_12 .span-10 .span-6 { width: 53.552%; }
+.container_12 .span-10 .span-5 { width: 44.262%; }
+.container_12 .span-10 .span-4 { width: 34.973%; }
+.container_12 .span-10 .span-3 { width: 25.683%; }
+.container_12 .span-10 .span-2 { width: 16.393%; }
+.container_12 .span-10 .span-1 { width: 7.104%; }
+
+.container_12 .span-9 .alpha, .container_12 .span-9 .omega { margin-right: 0; }
+.container_12 .span-9 .span-9 { width: 81.421%; }
+.container_12 .span-9 .span-8 { width: 72.131%; }
+.container_12 .span-9 .span-7 { width: 62.842%; }
+.container_12 .span-9 .span-6 { width: 53.552%; }
+.container_12 .span-9 .span-5 { width: 44.262%; }
+.container_12 .span-9 .span-4 { width: 34.973%; }
+.container_12 .span-9 .span-3 { width: 25.683%; }
+.container_12 .span-9 .span-2 { width: 16.393%; }
+.container_12 .span-9 .span-1 { width: 7.104%; }
+
+.container_12 .span-8 .alpha, .container_12 .span-8 .omega { margin-right: 0; }
+.container_12 .span-8 .span-8 { width: 72.131%; }
+.container_12 .span-8 .span-7 { width: 62.842%; }
+.container_12 .span-8 .span-6 { width: 53.552%; }
+.container_12 .span-8 .span-5 { width: 44.262%; }
+.container_12 .span-8 .span-4 { width: 34.973%; }
+.container_12 .span-8 .span-3 { width: 25.683%; }
+.container_12 .span-8 .span-2 { width: 16.393%; }
+.container_12 .span-8 .span-1 { width: 7.104%; }
+
+.container_12 .span-7 .alpha, .container_12 .span-7 .omega { margin-right: 0; }
+.container_12 .span-7 .span-7 { width: 62.842%; }
+.container_12 .span-7 .span-6 { width: 53.552%; }
+.container_12 .span-7 .span-5 { width: 44.262%; }
+.container_12 .span-7 .span-4 { width: 34.973%; }
+.container_12 .span-7 .span-3 { width: 25.683%; }
+.container_12 .span-7 .span-2 { width: 16.393%; }
+.container_12 .span-7 .span-1 { width: 7.104%; }
+
+.container_12 .span-6 .alpha, .container_12 .span-6 .omega { margin-right: 0; }
+.container_12 .span-6 .span-6 { width: 53.552%; }
+.container_12 .span-6 .span-5 { width: 44.262%; }
+.container_12 .span-6 .span-4 { width: 34.973%; }
+.container_12 .span-6 .span-3 { width: 25.683%; }
+.container_12 .span-6 .span-2 { width: 16.393%; }
+.container_12 .span-6 .span-1 { width: 7.104%; }
+
+.container_12 .span-5 .alpha, .container_12 .span-5 .omega { margin-right: 0; }
+.container_12 .span-5 .span-5 { width: 44.262%; }
+.container_12 .span-5 .span-4 { width: 34.973%; }
+.container_12 .span-5 .span-3 { width: 25.683%; }
+.container_12 .span-5 .span-2 { width: 16.393%; }
+.container_12 .span-5 .span-1 { width: 7.104%; }
+
+.container_12 .span-4 .alpha, .container_12 .span-4 .omega { margin-right: 0; }
+.container_12 .span-4 .span-4 { width: 34.973%; }
+.container_12 .span-4 .span-3 { width: 25.683%; }
+.container_12 .span-4 .span-2 { width: 16.393%; }
+.container_12 .span-4 .span-1 { width: 7.104%; }
+
+.container_12 .span-3 .alpha, .container_12 .span-3 .omega { margin-right: 0; }
+.container_12 .span-3 .span-3 { width: 25.683%; }
+.container_12 .span-3 .span-2 { width: 16.393%; }
+.container_12 .span-3 .span-1 { width: 7.104%; }
+
+.container_12 .span-2 .alpha, .container_12 .span-2 .omega { margin-right: 0; }
+.container_12 .span-2 .span-2 { width: 16.393%; }
+.container_12 .span-2 .span-1 { width: 7.104%; }
+
+.container_12 .span-1 .alpha, .container_12 .span-1 .omega { margin-right: 0; }
+.container_12 .span-1 .span-1 { width: 7.104%; }
+
+.alpha_omega_holder, .container_12 .span-11 .alpha, .container_12 .span-11 .omega, .container_12 .span-10 .alpha, .container_12 .span-10 .omega, .container_12 .span-9 .alpha, .container_12 .span-9 .omega, .container_12 .span-8 .alpha, .container_12 .span-8 .omega, .container_12 .span-7 .alpha, .container_12 .span-7 .omega, .container_12 .span-6 .alpha, .container_12 .span-6 .omega, .container_12 .span-5 .alpha, .container_12 .span-5 .omega, .container_12 .span-4 .alpha, .container_12 .span-4 .omega, .container_12 .span-3 .alpha, .container_12 .span-3 .omega, .container_12 .span-2 .alpha, .container_12 .span-2 .omega, .container_12 .span-1 .alpha, .container_12 .span-1 .omega { left: 0; }
