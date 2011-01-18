@@ -1,0 +1,76 @@
+/* FluidGrid CSS Framework -- 
+ * Hubert Florin -- 
+ * couzin.hub@gmail.com -- 
+ * Copyright 2011 Hubert Florin -- 
+ * Built with SASS http://sass-lang.com/ */ 
+  
+@import "variables.scss";
+
+*,.reset {margin:0; padding:0;}
+#page {margin:0 auto; position: relative; min-width: 600px;}
+
+// Setting the sequence to 2
+$sequence: 2;
+// Defining default style for first span
+.span-1 {float:left; position:relative; margin-right:$gutter + "%"; left:$gutter + "%";}
+
+// Adding the rest of the span to the default style above, using the sequence from 1 to $grid
+@while $sequence < $grid {
+  .span-#{$sequence} {
+    @extend .span-1;
+  }
+  $sequence: $sequence + 1; 
+}
+
+// Style for a full width span
+.span-full {width: 100%;float: left;clear: both;}
+
+// Reset the margin for first and last span
+.container{
+  .alpha, .omega {margin-left:0; margin-right:0;}
+  .alpha {clear: both;}
+  .omega {float:right;}
+}
+    
+.container_#{$grid} {
+  clear:both; position:relative; float:none;
+  .alpha, .omega {left:0;}
+}
+
+.col { position: absolute; bottom:0;height: 100%; z-index:-1;}
+
+
+.pull-1 {float: left; position: relative;}
+
+// Setting the sequence to 1
+$sequence: 1;
+// Adding the rest of the push/pull classes to the default style above, using the sequence from 1 to $grid
+@while $sequence <= $grid {
+  .pull-#{$sequence} {
+    @extend .pull-1;
+  }
+  .push-#{$sequence} {
+    @extend .pull-1;
+  }
+  $sequence: $sequence + 1; 
+}
+
+
+/* visual grid */
+.col { position: absolute; bottom:0; height:100%; z-index:-1; background-color:#def2ff;}
+
+/* Clearfix for page container */
+
+.clearfix,
+.container_#{$grid} {
+  &:after { content:"."; display:block; height:0; clear:both; visibility:hidden;}
+}
+
+/* Grid Visibility Toggle */
+
+.grid_#{$grid}{ display:none;}
+.display { display: block; }
+#switchgrid { 
+  position:fixed; bottom:0; left:0; z-index:99; font-size:11px; text-decoration:none; padding:5px 10px 3px; color:#fff; border:1px solid #aaa; background-color:#ccc;
+  &:hover { border: 1px solid #333; background-color: #777; cursor:pointer; }
+}
