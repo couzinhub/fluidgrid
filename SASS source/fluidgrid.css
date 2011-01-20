@@ -1,0 +1,147 @@
+/*FluidGrid CSS Framework --  Hubert Florin --  couzin.hub@gmail.com --  Copyright 2009 Hubert Florin --  Built with SASS http://sass-lang.com/ */
+*, .reset { margin: 0; padding: 0; }
+
+body { margin: 0 auto; position: relative; min-width: 600px; }
+
+.defaults, .span-1, .span-2, .span-3, .span-4, .span-5, .span-6, .span-7, .span-8, .span-9, .span-10, .span-11 { float: left; position: relative; margin-right: 2%; left: 2%; }
+
+.span-full { width: 100%; float: left; clear: both; }
+
+.grid_container .alpha, .grid_container .omega { left: 0; margin-left: 0; margin-right: 0; }
+.grid_container .alpha { clear: both; }
+.grid_container .omega { float: right; }
+
+.grid_container { clear: both; position: relative; float: none; }
+.grid_container .alpha, .grid_container .omega { left: 0; }
+
+/* visual grid */
+.col { position: absolute; bottom: 0; height: 100%; z-index: -1; background-color: #def2ff; }
+
+/* Clearfix for page container */
+.clearfix:after, .grid_container:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+
+.grid_container .span-11 .span-11 { width: 100.0%; left: 2.186%; margin-right: 2.186%; }
+.grid_container .span-11 .span-10 { width: 90.71%; left: 2.186%; margin-right: 2.186%; }
+.grid_container .span-11 .span-9 { width: 81.421%; left: 2.186%; margin-right: 2.186%; }
+.grid_container .span-11 .span-8 { width: 72.131%; left: 2.186%; margin-right: 2.186%; }
+.grid_container .span-11 .span-7 { width: 62.842%; left: 2.186%; margin-right: 2.186%; }
+.grid_container .span-11 .span-6 { width: 53.552%; left: 2.186%; margin-right: 2.186%; }
+.grid_container .span-11 .span-5 { width: 44.262%; left: 2.186%; margin-right: 2.186%; }
+.grid_container .span-11 .span-4 { width: 34.973%; left: 2.186%; margin-right: 2.186%; }
+.grid_container .span-11 .span-3 { width: 25.683%; left: 2.186%; margin-right: 2.186%; }
+.grid_container .span-11 .span-2 { width: 16.393%; left: 2.186%; margin-right: 2.186%; }
+.grid_container .span-11 .span-1 { width: 7.104%; left: 2.186%; margin-right: 2.186%; }
+.grid_container .span-11 .alpha, .grid_container .span-11 .omega { margin-right: 0; }
+
+.grid_container .span-10 .span-10 { width: 100.0%; left: 2.41%; margin-right: 2.41%; }
+.grid_container .span-10 .span-9 { width: 89.759%; left: 2.41%; margin-right: 2.41%; }
+.grid_container .span-10 .span-8 { width: 79.518%; left: 2.41%; margin-right: 2.41%; }
+.grid_container .span-10 .span-7 { width: 69.277%; left: 2.41%; margin-right: 2.41%; }
+.grid_container .span-10 .span-6 { width: 59.036%; left: 2.41%; margin-right: 2.41%; }
+.grid_container .span-10 .span-5 { width: 48.795%; left: 2.41%; margin-right: 2.41%; }
+.grid_container .span-10 .span-4 { width: 38.554%; left: 2.41%; margin-right: 2.41%; }
+.grid_container .span-10 .span-3 { width: 28.313%; left: 2.41%; margin-right: 2.41%; }
+.grid_container .span-10 .span-2 { width: 18.072%; left: 2.41%; margin-right: 2.41%; }
+.grid_container .span-10 .span-1 { width: 7.831%; left: 2.41%; margin-right: 2.41%; }
+.grid_container .span-10 .alpha, .grid_container .span-10 .omega { margin-right: 0; }
+
+.grid_container .span-9 .span-9 { width: 100%; left: 2.685%; margin-right: 2.685%; }
+.grid_container .span-9 .span-8 { width: 88.591%; left: 2.685%; margin-right: 2.685%; }
+.grid_container .span-9 .span-7 { width: 77.181%; left: 2.685%; margin-right: 2.685%; }
+.grid_container .span-9 .span-6 { width: 65.772%; left: 2.685%; margin-right: 2.685%; }
+.grid_container .span-9 .span-5 { width: 54.362%; left: 2.685%; margin-right: 2.685%; }
+.grid_container .span-9 .span-4 { width: 42.953%; left: 2.685%; margin-right: 2.685%; }
+.grid_container .span-9 .span-3 { width: 31.544%; left: 2.685%; margin-right: 2.685%; }
+.grid_container .span-9 .span-2 { width: 20.134%; left: 2.685%; margin-right: 2.685%; }
+.grid_container .span-9 .span-1 { width: 8.725%; left: 2.685%; margin-right: 2.685%; }
+.grid_container .span-9 .alpha, .grid_container .span-9 .omega { margin-right: 0; }
+
+.grid_container .span-8 .span-8 { width: 100%; left: 3.03%; margin-right: 3.03%; }
+.grid_container .span-8 .span-7 { width: 87.121%; left: 3.03%; margin-right: 3.03%; }
+.grid_container .span-8 .span-6 { width: 74.242%; left: 3.03%; margin-right: 3.03%; }
+.grid_container .span-8 .span-5 { width: 61.364%; left: 3.03%; margin-right: 3.03%; }
+.grid_container .span-8 .span-4 { width: 48.485%; left: 3.03%; margin-right: 3.03%; }
+.grid_container .span-8 .span-3 { width: 35.606%; left: 3.03%; margin-right: 3.03%; }
+.grid_container .span-8 .span-2 { width: 22.727%; left: 3.03%; margin-right: 3.03%; }
+.grid_container .span-8 .span-1 { width: 9.848%; left: 3.03%; margin-right: 3.03%; }
+.grid_container .span-8 .alpha, .grid_container .span-8 .omega { margin-right: 0; }
+
+.grid_container .span-7 .span-7 { width: 100%; left: 3.478%; margin-right: 3.478%; }
+.grid_container .span-7 .span-6 { width: 85.217%; left: 3.478%; margin-right: 3.478%; }
+.grid_container .span-7 .span-5 { width: 70.435%; left: 3.478%; margin-right: 3.478%; }
+.grid_container .span-7 .span-4 { width: 55.652%; left: 3.478%; margin-right: 3.478%; }
+.grid_container .span-7 .span-3 { width: 40.87%; left: 3.478%; margin-right: 3.478%; }
+.grid_container .span-7 .span-2 { width: 26.087%; left: 3.478%; margin-right: 3.478%; }
+.grid_container .span-7 .span-1 { width: 11.304%; left: 3.478%; margin-right: 3.478%; }
+.grid_container .span-7 .alpha, .grid_container .span-7 .omega { margin-right: 0; }
+
+.grid_container .span-6 .span-6 { width: 100%; left: 4.082%; margin-right: 4.082%; }
+.grid_container .span-6 .span-5 { width: 82.653%; left: 4.082%; margin-right: 4.082%; }
+.grid_container .span-6 .span-4 { width: 65.306%; left: 4.082%; margin-right: 4.082%; }
+.grid_container .span-6 .span-3 { width: 47.959%; left: 4.082%; margin-right: 4.082%; }
+.grid_container .span-6 .span-2 { width: 30.612%; left: 4.082%; margin-right: 4.082%; }
+.grid_container .span-6 .span-1 { width: 13.265%; left: 4.082%; margin-right: 4.082%; }
+.grid_container .span-6 .alpha, .grid_container .span-6 .omega { margin-right: 0; }
+
+.grid_container .span-5 .span-5 { width: 100%; left: 4.938%; margin-right: 4.938%; }
+.grid_container .span-5 .span-4 { width: 79.012%; left: 4.938%; margin-right: 4.938%; }
+.grid_container .span-5 .span-3 { width: 58.025%; left: 4.938%; margin-right: 4.938%; }
+.grid_container .span-5 .span-2 { width: 37.037%; left: 4.938%; margin-right: 4.938%; }
+.grid_container .span-5 .span-1 { width: 16.049%; left: 4.938%; margin-right: 4.938%; }
+.grid_container .span-5 .alpha, .grid_container .span-5 .omega { margin-right: 0; }
+
+.grid_container .span-4 .span-4 { width: 100%; left: 6.25%; margin-right: 6.25%; }
+.grid_container .span-4 .span-3 { width: 73.438%; left: 6.25%; margin-right: 6.25%; }
+.grid_container .span-4 .span-2 { width: 46.875%; left: 6.25%; margin-right: 6.25%; }
+.grid_container .span-4 .span-1 { width: 20.313%; left: 6.25%; margin-right: 6.25%; }
+.grid_container .span-4 .alpha, .grid_container .span-4 .omega { margin-right: 0; }
+
+.grid_container .span-3 .span-3 { width: 100%; left: 8.511%; margin-right: 8.511%; }
+.grid_container .span-3 .span-2 { width: 63.83%; left: 8.511%; margin-right: 8.511%; }
+.grid_container .span-3 .span-1 { width: 27.66%; left: 8.511%; margin-right: 8.511%; }
+.grid_container .span-3 .alpha, .grid_container .span-3 .omega { margin-right: 0; }
+
+.grid_container .span-2 .span-2 { width: 100%; left: 13.333%; margin-right: 13.333%; }
+.grid_container .span-2 .span-1 { width: 43.333%; left: 13.333%; margin-right: 13.333%; }
+.grid_container .span-2 .alpha, .grid_container .span-2 .omega { margin-right: 0; }
+
+.grid_container .span-1 .span-1 { width: 100%; left: 30.769%; margin-right: 30.769%; }
+.grid_container .span-1 .alpha, .grid_container .span-1 .omega { margin-right: 0; }
+
+.alpha_omega_holder, .grid_container .span-11 .alpha, .grid_container .span-11 .omega, .grid_container .span-10 .alpha, .grid_container .span-10 .omega, .grid_container .span-9 .alpha, .grid_container .span-9 .omega, .grid_container .span-8 .alpha, .grid_container .span-8 .omega, .grid_container .span-7 .alpha, .grid_container .span-7 .omega, .grid_container .span-6 .alpha, .grid_container .span-6 .omega, .grid_container .span-5 .alpha, .grid_container .span-5 .omega, .grid_container .span-4 .alpha, .grid_container .span-4 .omega, .grid_container .span-3 .alpha, .grid_container .span-3 .omega, .grid_container .span-2 .alpha, .grid_container .span-2 .omega, .grid_container .span-1 .alpha, .grid_container .span-1 .omega { left: 0; }
+
+.grid_container .span-1 { width: 6.5%; }
+.grid_container .col-1 { left: 0%; }
+
+.grid_container .span-2 { width: 15%; }
+.grid_container .col-2 { left: 8.5%; }
+
+.grid_container .span-3 { width: 23.5%; }
+.grid_container .col-3 { left: 17%; }
+
+.grid_container .span-4 { width: 32%; }
+.grid_container .col-4 { left: 25.5%; }
+
+.grid_container .span-5 { width: 40.5%; }
+.grid_container .col-5 { left: 34%; }
+
+.grid_container .span-6 { width: 49%; }
+.grid_container .col-6 { left: 42.5%; }
+
+.grid_container .span-7 { width: 57.5%; }
+.grid_container .col-7 { left: 51%; }
+
+.grid_container .span-8 { width: 66%; }
+.grid_container .col-8 { left: 59.5%; }
+
+.grid_container .span-9 { width: 74.5%; }
+.grid_container .col-9 { left: 68%; }
+
+.grid_container .span-10 { width: 83%; }
+.grid_container .col-10 { left: 76.5%; }
+
+.grid_container .span-11 { width: 91.5%; }
+.grid_container .col-11 { left: 85%; }
+
+.grid_container .span-12 { width: 100%; }
+.grid_container .col-12 { left: 93.5%; }

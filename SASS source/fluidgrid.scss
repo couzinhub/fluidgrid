@@ -1,23 +1,41 @@
-/* FluidGrid CSS Framework -- 
- * Hubert Florin -- 
- * couzin.hub@gmail.com -- 
- * Copyright 2011 Hubert Florin -- 
- * Built with SASS http://sass-lang.com/ */ 
-  
-@import "variables.scss";
+/*FluidGrid CSS Framework -- 
+  Hubert Florin -- 
+  couzin.hub@gmail.com -- 
+  Copyright 2009 Hubert Florin -- 
+  Built with SASS http://sass-lang.com/ */
+
+
+//////////////////////////////////////////////////////////////////////
+// Grid Columns and Gutters
+// Here you can choose the number of columns and the width
+// of the gutters
+//////////////////////////////////////////////////////////////////////
+
+$grid: 12;
+$gutter: 2; // in %
+
+// Full / Light version (without push/pull, COMING SOON)
+// $type: "full";
+
+
+
+//////////////////////////////////////////////////////////////////////
+// FLUIDGRID BASES
+// Here We set the ground rules for the elements in the grid
+//////////////////////////////////////////////////////////////////////
+
+
 
 *,.reset {margin:0; padding:0;}
-#page {margin:0 auto; position: relative; min-width: 600px;}
+body {margin:0 auto; position: relative; min-width: 600px;}
 
-// Setting the sequence to 2
-$sequence: 2;
-// Defining default style for first span
-.span-1 {float:left; position:relative; margin-right:$gutter + "%"; left:$gutter + "%";}
+// Default attributes for all columns
 
-// Adding the rest of the span to the default style above, using the sequence from 1 to $grid
+.defaults{float:left; position:relative; margin-right:$gutter#{"%"}; left:$gutter#{"%"};}
+$sequence: 1;
 @while $sequence < $grid {
   .span-#{$sequence} {
-    @extend .span-1;
+    @extend .defaults;
   }
   $sequence: $sequence + 1; 
 }
@@ -26,51 +44,119 @@ $sequence: 2;
 .span-full {width: 100%;float: left;clear: both;}
 
 // Reset the margin for first and last span
-.container{
-  .alpha, .omega {margin-left:0; margin-right:0;}
+.grid_container{
+  .alpha, .omega {left:0; margin-left:0; margin-right:0;}
   .alpha {clear: both;}
   .omega {float:right;}
 }
-    
-.container_#{$grid} {
+
+// Alpha (first) and Omega (last) spans    
+.grid_container {
   clear:both; position:relative; float:none;
   .alpha, .omega {left:0;}
 }
-
-.col { position: absolute; bottom:0;height: 100%; z-index:-1;}
-
-
-.pull-1 {float: left; position: relative;}
-
-// Setting the sequence to 1
-$sequence: 1;
-// Adding the rest of the push/pull classes to the default style above, using the sequence from 1 to $grid
-@while $sequence <= $grid {
-  .pull-#{$sequence} {
-    @extend .pull-1;
-  }
-  .push-#{$sequence} {
-    @extend .pull-1;
-  }
-  $sequence: $sequence + 1; 
-}
-
 
 /* visual grid */
 .col { position: absolute; bottom:0; height:100%; z-index:-1; background-color:#def2ff;}
 
 /* Clearfix for page container */
-
 .clearfix,
-.container_#{$grid} {
+.grid_container {
   &:after { content:"."; display:block; height:0; clear:both; visibility:hidden;}
 }
 
-/* Grid Visibility Toggle */
 
-.grid_#{$grid}{ display:none;}
-.display { display: block; }
-#switchgrid { 
-  position:fixed; bottom:0; left:0; z-index:99; font-size:11px; text-decoration:none; padding:5px 10px 3px; color:#fff; border:1px solid #aaa; background-color:#ccc;
-  &:hover { border: 1px solid #333; background-color: #777; cursor:pointer; }
+//////////////////////////////////////////////////////////////////////
+// Setting main variables
+//////////////////////////////////////////////////////////////////////
+
+
+// Defining the width of only 1 column
+$col_width : (100 - (($grid - 1) * $gutter)) / $grid;
+
+// Defining the width of 1 column plus 1 gutter
+$col_gut_width : $col_width + $gutter;
+  
+// Setting first Span number for recursive operations
+$span : 1;
+
+// Setting column number
+$cols :$grid - 1;
+
+
+//////////////////////////////////////////////////////////////////////
+//// Second Level Grid (Subgrid)
+//// We start with this so we can override them later
+//////////////////////////////////////////////////////////////////////
+
+@while $cols > 0 {
+  
+  // Resetting Coef on each pass
+  // The coef help setting the width of the columns in the subgrids
+  $coef : 100 / (($col_gut_width * $cols) - $gutter);
+  
+  .grid_container {
+    .span-#{$cols} {      
+      
+      //////////////////////////////////////////////////////////////////////
+      // sub columns attributes
+      //////////////////////////////////////////////////////////////////////
+
+      $subcols:$cols;
+      @while $subcols > 0 {
+        .span-#{$subcols} {
+          width : (($col_gut_width * $subcols) - $gutter) * $coef#{"%"};
+          left : $gutter * $coef#{"%"};
+          margin-right : $gutter * $coef#{"%"};
+        }
+        $subcols : $subcols - 1;
+      }
+      
+      //////////////////////////////////////////////////////////////////////      
+      // alpha and omage in sub columns
+      //////////////////////////////////////////////////////////////////////
+
+      .alpha, .omega {margin-right:0;}
+
+      //////////////////////////////////////////////////////////////////////
+
+    }
+  }
+  $cols : $cols - 1 ;  
+}
+
+
+//////////////////////////////////////////////////////////////////////
+//// Alpha and Omega Reset for Sub grid
+//////////////////////////////////////////////////////////////////////
+
+
+$cols :$grid - 1;
+.alpha_omega_holder {left:0;}
+@while $cols > 0 {
+  .grid_container .span-#{$cols} .alpha, .grid_container .span-#{$cols} .omega {
+    @extend .alpha_omega_holder;
+  }
+  $cols : $cols - 1;
+}
+
+
+//////////////////////////////////////////////////////////////////////
+//// First Level Grid
+//////////////////////////////////////////////////////////////////////
+
+
+
+@while $span <= $grid {  
+  .grid_container {
+    // Width of the columns in the first level grid
+    .span-#{$span} {
+      width: (($col_gut_width * $span) - $gutter)#{"%"};
+    } 
+    // Position of the grid columns
+    .col-#{$span} {
+      left: (($col_gut_width * $span) - $col_gut_width)#{"%"};
+    }
+  }
+  $span: $span + 1;
 }
