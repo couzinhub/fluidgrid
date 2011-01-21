@@ -104,12 +104,44 @@ $cols :$grid - 1;
 
       $subcols:$cols;
       @while $subcols > 0 {
+        
+        // normal subcolumns
         .span-#{$subcols} {
           width : (($col_gut_width * $subcols) - $gutter) * $coef#{"%"};
           left : $gutter * $coef#{"%"};
           margin-right : $gutter * $coef#{"%"};
         }
+
+        // PREFIX for subcolumns
+        .prefix-#{$subcols} {
+          padding-left : ($col_gut_width * $subcols) * $coef#{"%"};
+        }
+
+        // SUFFIX for subcolumns
+        .suffix-#{$subcols} {
+          padding-right : ($col_gut_width * $subcols) * $coef#{"%"};
+        }
+
+        // PUSH for subcolumns
+        .push-#{$subcols} {
+          margin-left : ($col_gut_width * $subcols) * $coef#{"%"};
+          margin-right : -($col_gut_width * $subcols) * $coef#{"%"};
+          &.alpha{
+            margin-right : -($col_gut_width * $subcols) * $coef#{"%"};
+          }
+        }
+        
+        // PULL for subcolumns
+        .pull-#{$subcols} {
+          margin-left : -($col_gut_width * $subcols) * $coef#{"%"};
+          margin-right : ($col_gut_width * $subcols) * $coef#{"%"};
+          &.omega{
+            margin-right : ($col_gut_width * $subcols) * $coef#{"%"};
+          }
+        }
+        
         $subcols : $subcols - 1;
+
       }
       
       //////////////////////////////////////////////////////////////////////      
@@ -149,14 +181,48 @@ $cols :$grid - 1;
 
 @while $span <= $grid {  
   .grid_container {
+    
     // Width of the columns in the first level grid
     .span-#{$span} {
       width: (($col_gut_width * $span) - $gutter)#{"%"};
     } 
+    
     // Position of the grid columns
     .col-#{$span} {
       left: (($col_gut_width * $span) - $col_gut_width)#{"%"};
     }
+    
+    // PREFIX for first level columns
+    .prefix-#{$span} {
+      padding-left: ($col_gut_width * $span)#{"%"};
+    }
+
+    // SUFFIX for first level columns
+    .suffix-#{$span} {
+      padding-right: ($col_gut_width * $span)#{"%"};
+    }
+    
+    // PUSH for first level columns
+    .push-#{$span} {
+      margin-left: ($col_gut_width * $span)#{"%"};
+      margin-right: -($col_gut_width * $span) + $gutter#{"%"};
+      &.alpha {
+        margin-right: -($col_gut_width * $span)#{"%"};
+      }
+    }
+
+    // PUSH for first level columns
+    .pull-#{$span} {
+      margin-left: -($col_gut_width * $span)#{"%"};
+      margin-right: ($col_gut_width * $span) + $gutter#{"%"};
+      &.omega {
+        margin-right: ($col_gut_width * $span)#{"%"};
+      }
+    }
+
+
+    
+    
   }
   $span: $span + 1;
 }

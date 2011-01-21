@@ -1,0 +1,19 @@
+
+sass -t compact fluidgrid.sass fluidgrid.css
+sass -t compact fluidgrid-12.sass fluidgrid-12.css
+sass -t compact fluidgrid-16.sass fluidgrid-16.css
+sass -t compact fluidgrid-24.sass fluidgrid-24.css
+
+sass -t compact fluidgrid-12-l.sass fluidgrid-12-l.css
+sass -t compact fluidgrid-16-l.sass fluidgrid-16-l.css
+sass -t compact fluidgrid-24-l.sass fluidgrid-24-l.css
+
+
+sass -t compressed fluidgrid.sass fluidgrid.css
+sass -t compressed fluidgrid-12.sass fluidgrid-12.css
+sass -t compressed fluidgrid-16.sass fluidgrid-16.css
+sass -t compressed fluidgrid-24.sass fluidgrid-24.css
+
+sass -t compressed fluidgrid-12-l.sass fluidgrid-12-l.css
+sass -t compressed fluidgrid-16-l.sass fluidgrid-16-l.css
+sass -t compressed fluidgrid-24-l.sass fluidgrid-24-l.css

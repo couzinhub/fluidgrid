@@ -14,7 +14,7 @@
   <!-- Framework CSS -->
   <link type="text/css" rel="stylesheet" media="all" href="../css/text.css"/>
   <link type="text/css" rel="stylesheet" media="all" href="../SASS/fluidgrid.css"/>
-  <style type="text/css" media="screen"> h5{ background-color:#cdd;} </style>
+  <style type="text/css" media="screen"> body{margin:0 40px;} h5{ background-color:#cdd;} </style>
 	
 </head>
 
@@ -25,6 +25,8 @@
     	<a href="http://fluidgrid.net/">Fluidgrid</a> Example : The Grids
     </h1>
 	  <h3>Test grid for all classes</h3>
+	  
+	  <p>This document is used to demonstrate the capabilities of the FLUIDGRID grid system. This grid uses 12 columns, with 2% gutters, but fluidgrid can be adapted to any number of columns, for any gutter width. FLUIDGRID is build with SASS, it is a CSS ONLY framework, and does not require javascript or any additionnal script. Unlike most fluid framework, FLUIDGRID allows you to have columns WITHIN columns.</p>
 	  
   	<div class="span-full grid_container">
 		  
@@ -244,7 +246,11 @@
 		
 		
 		
-		<h2> Grid 12 columns</h2>
+  	  <div class="span-full">
+  	    <br/>
+        <h3>Example of layouts, using subcolumns</h3>
+  	    <br/>
+      </div>
   	
 
 		  
@@ -375,6 +381,54 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
       </div>
 
+  	
+  	  <div class="span-full">
+  	    <br/>
+        <h3>These layouts load the content before the sidebars. By using simple classes like pull/push, you can move the columns on the grids</h3>
+  	    <br/>
+      </div>
+
+
+      <div class="span-6 alpha push-3">
+        <h5>Span 5</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+      </div>
+
+		  <div class="span-3 pull-6">
+        <h5>Span 3</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+
+      </div>
+            
+		  <div class="span-3 omega">
+        <h5>Span 4</h5>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+      </div>
+
+
+
+  	  <div class="span-full">
+  	    <br/>
+        <h3>The following layout use a mix of the PUSH, PULL and PREFIX classes, and are within each others</h3>
+  	    <br/>
+      </div>
+
+
+		  <div class="alpha span-10 push-1">
+        <h5>Span-10 ALPHA PUSH-1</h5>
+        <div class="alpha span-8 prefix-1"><h5>Span-8 ALPHA PREFIX-1 in Span-10</h5>
+          <div class="alpha span-6 prefix-2"><h5>Span-6 ALPHA PREFIX-2 in Span-8 in Span-10</h5>
+            <div class="alpha span-3 push-3"><h5>Span-3 ALPHA PUSH-3 in span-6 (comes first) in Span-8 in Span-10</h5></div>
+            <div class="omega span-3 pull-3"><h5>Span-3 OMEGA PULL-3 in span-6 (comes after) in Span-8 in Span-10</h5>
+              <div class="alpha span-2 push-1"><h5>Span-2 ALPHA PUSH-1 in span-6 in span-8 in span-10</h5></div>
+              <div class="omega span-1 pull-2"><h5>Span-2 OMEGA PUSH-2 in span-6 in span-8 in span-10</h5></div>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+  	
   	</div> <!-- /container container_12 -->
   	
 		
