@@ -25,17 +25,22 @@ $gutter: 2; // in %
 //////////////////////////////////////////////////////////////////////
 
 
+// Quick Reset
 
+/* If you want to use a more complete reset, make sure to 
+ * load it BEFORE this stylesheet.
+ */
+ 
 *,.reset {margin:0; padding:0;}
 body {margin:0 auto; position: relative; min-width: 600px;}
 
 // Default attributes for all columns
 
-.defaults{float:left; position:relative; margin-right:$gutter#{"%"}; left:$gutter#{"%"};}
+.fluidgrid_defaults{float:left; position:relative; margin-right:$gutter#{"%"}; left:$gutter#{"%"};}
 $sequence: 1;
 @while $sequence < $grid {
   .span-#{$sequence} {
-    @extend .defaults;
+    @extend .fluidgrid_defaults;
   }
   $sequence: $sequence + 1; 
 }
@@ -45,15 +50,10 @@ $sequence: 1;
 
 // Reset the margin for first and last span
 .grid_container{
+  clear:both; position:relative; float:none;
   .alpha, .omega {left:0; margin-left:0; margin-right:0;}
   .alpha {clear: both;}
   .omega {float:right;}
-}
-
-// Alpha (first) and Omega (last) spans    
-.grid_container {
-  clear:both; position:relative; float:none;
-  .alpha, .omega {left:0;}
 }
 
 /* visual grid */
@@ -166,7 +166,8 @@ $cols :$grid - 1;
 $cols :$grid - 1;
 .alpha_omega_holder {left:0;}
 @while $cols > 0 {
-  .grid_container .span-#{$cols} .alpha, .grid_container .span-#{$cols} .omega {
+  .grid_container .span-#{$cols} .alpha, 
+  .grid_container .span-#{$cols} .omega {
     @extend .alpha_omega_holder;
   }
   $cols : $cols - 1;
@@ -176,7 +177,6 @@ $cols :$grid - 1;
 //////////////////////////////////////////////////////////////////////
 //// First Level Grid
 //////////////////////////////////////////////////////////////////////
-
 
 
 @while $span <= $grid {  
@@ -211,7 +211,7 @@ $cols :$grid - 1;
       }
     }
 
-    // PUSH for first level columns
+    // PULL for first level columns
     .pull-#{$span} {
       margin-left: -($col_gut_width * $span)#{"%"};
       margin-right: ($col_gut_width * $span) + $gutter#{"%"};
@@ -220,9 +220,6 @@ $cols :$grid - 1;
       }
     }
 
-
-    
-    
   }
   $span: $span + 1;
 }
