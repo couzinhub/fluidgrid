@@ -1,4 +1,3 @@
-
 /*  -------------------------------------------
 
     ===========================================
@@ -6,8 +5,7 @@
                          *
     = = = = = = = = = = = = = = = = = = = = = = 
               &copy; 2011, Hubert Florin 
-                http://couzinhub.com
-  
+                couzin.hub@gmail.com  
              Released under MIT LICENSE
     
     Permission is hereby granted, free of charge, to 
